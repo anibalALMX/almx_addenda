@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo> 
     <data>
-        <!--
         <template id="alamex_l10n_mx_edi_addenda_mavi" name="MAVI ADDENDA">
           <Mavi xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <t t-set="impuestos_al" t-value="record._l10n_mx_edi_create_taxes_cfdi_values()"/>
@@ -23,6 +22,5 @@
         <record id="alamex_l10n_mx_edi_addenda_mavi" model="ir.ui.view">
             <field name="l10n_mx_edi_addenda_flag" >True</field>
         </record>
-        -->
     </data>
 </odoo>
