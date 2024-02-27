@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo> 
+    <data>
+        <!--
+        <template id="alamex_l10n_mx_edi_addenda_mavi" name="MAVI ADDENDA">
+          <Mavi xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <t t-set="impuestos_al" t-value="record._l10n_mx_edi_create_taxes_cfdi_values()"/>
+                <t t-set="decimal_precision" t-value="record.currency_id.l10n_mx_edi_decimal_places"/>
+                <RfcProveedor><t t-esc="record.company_id.vat"/></RfcProveedor
+                ><NumProveedor><t t-esc="record.num_provalm"/></NumProveedor>
+                <FechaFacturacion><t t-esc="record.invoice_date"/></FechaFacturacion>
+                <NumPedido><t t-esc="record.numPedido_al"/></NumPedido>
+                <CodMoneda><t t-esc="record.currency_id.name"/></CodMoneda>
+                <MontoTotal><t t-esc="record.amount_total"/></MontoTotal>
+                <IVA><t t-esc="'%.*f' % (decimal_precision, impuestos_al['total_transferred']) if impuestos_al['transferred'] else 0"/></IVA>
+                <PorcentajeIVA><t t-esc="  100 * ( sum([x['rate'] for x in impuestos_al['transferred']])/len(impuestos_al['transferred']) ) if impuestos_al['transferred'] else 0"/></PorcentajeIVA>
+                <NumFactura><t t-esc="record.numFactura_al"/></NumFactura>
+                <Serie><t t-esc="record.serie_al"/></Serie>
+                <Folio><t t-esc="record.folio_al"/></Folio>
+            </Mavi>
+        </template>
+
+        <record id="alamex_l10n_mx_edi_addenda_mavi" model="ir.ui.view">
+            <field name="l10n_mx_edi_addenda_flag" >True</field>
+        </record>
+        -->
+    </data>
+</odoo>

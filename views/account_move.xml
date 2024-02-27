@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="alamex_account_move" model="ir.ui.view">
+            <field name="name">account.move.inherith.form.alamex</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='currency_id']" position="after">
+                        <field name="is_addenda" attrs="{'readonly':[('state','!=','draft')]}"/>
+                </xpath>
+                <xpath expr="//page[@name='other_info']" position="after">
+                    <page id="addenda_mavi" string="Addenda" name="addenda_mavi" attrs="{'invisible': [ '|',('type','!=','out_invoice'),'&amp;',('type','=','out_invoice'),('is_addenda', '=', False)]}">
+                        <group id="addenda_group" string="Addendas">
+                            <group >
+                                <field name="addenda_verify" invisible="1"/>
+                                <field name="num_provalm" attrs="{'readonly':[('state','!=','draft')],'required': ['&amp;',('type','=','out_invoice'),('is_addenda', '=', False) ]}" />
+                                <field name="numPedido_al" attrs="{'readonly':[('state','!=','draft')],'required': ['&amp;',('type','=','out_invoice'),('is_addenda', '=', False) ]}" />
+                                <field name="numFactura_al" attrs="{'readonly':[('state','!=','draft')],'required': ['&amp;',('type','=','out_invoice'),('is_addenda', '=', False) ]}" />
+                                <field name="serie_al" attrs="{'readonly':[('state','!=','draft')],'required': ['&amp;',('type','=','out_invoice'),('is_addenda', '=', False) ]}" />
+                                <field name="folio_al" attrs="{'readonly':[('state','!=','draft')],'required': ['&amp;',('type','=','out_invoice'),('is_addenda', '=', False) ]}" />
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+        
+    </data>
+</odoo>
