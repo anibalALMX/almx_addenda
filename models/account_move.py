@@ -12,6 +12,6 @@ class AlamexAccountMove(models.Model):
     serie_al = fields.Char('Serie')
     folio_al = fields.Char('Folio')
 
-    is_addenda = fields.Boolean(string='¿Tiene Addenda?', help='Verifica si la factura necesita el complemento de addenda en el XML')
+    #is_addenda = fields.Boolean(string='¿Tiene Addenda?', help='Verifica si la factura necesita el complemento de addenda en el XML')
     
     
